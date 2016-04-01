@@ -1,0 +1,61 @@
+{% extends "dash.html" %}
+{% load crispy_forms_tags %}        
+{% load i18n %} 
+{% load staticfiles %} 
+{% block container %} 
+<body>
+<div class="container-fluid" class="responsive" style="height: auto; width: auto; background-color: grey">
+<h2 style="color:white"><center><b>{% trans "Compose Message" %}<b></center></h2><br>
+<div class="container-fluid" style="height:auto; width: auto; color:grey; background-color: ghostwhite"><br><br>
+<br>
+<div class="row">
+<div class="col-md-2">
+  </div>
+<div class="col-md-8" style="padding:1px;border:1px groove SteelBlue; background-color:white">
+<center><b><h2>Instant Message</h2><b></center><hr>
+<div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-9">
+		  
+                        {{post.zip_Code}}
+                
+{% for object in zipcode %}
+  {% if object.name == post.zip_Code %}
+  
+     {{ object.email }} <p>,</p> 
+  
+  {% else %}
+                        
+                {% endif %}  
+{% endfor %}
+
+<form id="user_form" method="POST" action=".">{% csrf_token %}
+   {{error}}<br/><br/>
+<div class="registerLabel">recipient:</div>
+<div class="registerTextLabel">
+    <input type="text" id="registerUsername" name="registerUsername" class="registerTextDetails">
+</div>
+
+<div class="registerLabel" id="registerPass">subject:</div>
+<div class="registerTextLabel">
+    <input type="text" id="registerPass" name="registerPass" class="registerTextDetails">
+</div>
+
+<div class="registerLabel" id="registeremail">body</div>
+<div class="registerTextLabel">
+    <input type="text" id="registeremail" name="registeremail" class="registerTextDetails">
+</div><br>
+{%block content%}
+
+
+
+{%endblock%}
+
+<div id="registerButtonDiv">
+        <button class="registerButtons" id="cancelRegisterButton">Cancel</button>
+        <button type="submit" class="registerButtons" id="submitRegistration">Register</button>
+</div>
+</form></div></div></div></div><br><br>
+</div><br></div>
+
+{% endblock %}

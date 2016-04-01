@@ -1,0 +1,56 @@
+{% extends "dash.html" %}
+{% load crispy_forms_tags %}        
+{% load i18n %} 
+{% load staticfiles %} 
+{% block container %} 
+<body>
+<div class="container-fluid" class="responsive" style="height: auto; width: auto; background-color: grey">
+<h2 style="color:white"><center><b>{% trans "Compose Message" %}<b></center></h2><br>
+<div class="container-fluid" style="height:auto; width: auto; color:grey; background-color: ghostwhite"><br><br>
+<br>
+<div class="row">
+<div class="col-md-2">
+  </div>
+<div class="col-md-8" style="padding:1px;border:1px groove SteelBlue; background-color:white">
+<center><b><h2>Instant Message</h2><b></center><hr>
+<div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-9">
+		  
+                      
+
+<form action="" method="post">
+{% csrf_token %} 
+<table>
+<fieldset>
+        
+        
+        <div id="div_id_favorite_food" class="ctrlHolder">
+            <label for="id_favorite_food" class="requiredField">What is <span class="asteriskField">*</span></label>
+            <input id="id_favorite_food" class="textinput textInput" type="text" value= name="favorite_food" maxlength="80" required="required" />
+        </div>
+        
+        <div id="div_id_favorite_number" class="ctrlHolder">
+            <label for="id_favorite_number">Favorite </label>
+            <input id="id_favorite_number" type="text" name="favorite_number" class="textinput textInput" />
+        </div>
+        <div id="div_id_notes" class="ctrlHolder">
+            <label for="id_notes">Additional </label>
+            <input id="id_notes" type="text" name="notes" class="textinput textInput" />
+        </div>
+    </fieldset>
+</table>
+<center><input type="image" src='{% static "img/msge.png" %}' /></center>
+</form></div></div></div></div><br><br>
+</div><br></div>
+
+{% endblock %}
+"{% for object in zipcode %}
+  {% if object.name == post.zip_Code %}
+  
+     {{ object.email }}
+  
+  {% else %}
+                        
+                {% endif %}  
+{% endfor %}"
