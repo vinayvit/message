@@ -1,5 +1,0 @@
-<li {% if active_link == "home" %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
-<li {% if active_link == "about" %}class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
-<li {% if active_link == "faq" %}class="active"{% endif %}><a href="{% url 'faq' %}">Faq<</a></li>
-<li {% if active_link == "term" %}class="active"{% endif %}><a href="{% url 'term' %}">Terms</a></li>
-

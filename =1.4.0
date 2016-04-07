@@ -1,0 +1,14 @@
+Downloading/unpacking django-authtools
+  Downloading django-authtools-1.5.0.tar.gz
+  Running setup.py (path:/home/vit1/7April/myvenv/build/django-authtools/setup.py) egg_info for package django-authtools
+    
+    no previously-included directories found matching 'docs/_build'
+    warning: no previously-included files matching '*.pyc' found anywhere in distribution
+Requirement already satisfied (use --upgrade to upgrade): Django>=1.8 in /home/vit1/7April/myvenv/lib/python3.4/site-packages (from django-authtools)
+Installing collected packages: django-authtools
+  Running setup.py install for django-authtools
+    
+    no previously-included directories found matching 'docs/_build'
+    warning: no previously-included files matching '*.pyc' found anywhere in distribution
+Successfully installed django-authtools
+Cleaning up...

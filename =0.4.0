@@ -1,0 +1,12 @@
+Downloading/unpacking django-environ
+  Downloading django-environ-0.4.0.tar.gz
+  Running setup.py (path:/home/vit1/7April/myvenv/build/django-environ/setup.py) egg_info for package django-environ
+    
+Requirement already satisfied (use --upgrade to upgrade): django in /home/vit1/7April/myvenv/lib/python3.4/site-packages (from django-environ)
+Downloading/unpacking six (from django-environ)
+  Downloading six-1.10.0-py2.py3-none-any.whl
+Installing collected packages: django-environ, six
+  Running setup.py install for django-environ
+    
+Successfully installed django-environ six
+Cleaning up...
